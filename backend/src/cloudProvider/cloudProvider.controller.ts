@@ -9,6 +9,7 @@ export class CloudProviderController {
 
   @Get()
   async getCloudProviders(): Promise<CloudProvider[]> {
+    console.log('ici');
     return this.cloudProviderService.getCloudProviders();
   }
 
@@ -16,6 +17,7 @@ export class CloudProviderController {
   async addCloudProvider(
     @Body() cloudProviderDto: CloudProviderDto,
   ): Promise<string> {
+    console.log('ici');
     return await this.cloudProviderService.addCloudProvider(cloudProviderDto);
   }
 }
